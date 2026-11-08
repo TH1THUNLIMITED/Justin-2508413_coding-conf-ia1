@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&display=swap');
+
+:root {
+    --Family: 'Bebas Neue', cursive;
+    --Family2: 'Black Ops One', cursive;
+
+    --Font-color: rgb(53, 193, 69);
+    --Accent-color: rgba(9, 112, 19, 0.3);
+    --Background-color: rgb(28, 30, 31);
+}
+
+.id-photo {
+    width: 200px;
+}
+
+
+body {
+    font-family: var(--Family2);
+    background-color: var(--Background-color);
+    color: var(--Font-color);
+    align-items: center;
+    justify-content: center;
+
+}
+
+header {
+    background-color: var(--Background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 5px 30px var(--Accent-color);
+}
+
+main {
+    margin: 20px;
+    padding-left: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 5px 30px var(--Accent-color);
+
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    margin-top: 100px;
+    border-top: 3px solid black;
+}
+
+.profile-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgb(172, 172, 172);
+    margin-top: -1px;
+    margin-left: -12px;
+    margin-right: -2px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 5px 10px var(--Accent-color);
+}
+
+/* Desktop navbar */
+.desktop-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+        position: relative;
+    }
+
+    .mobile-nav summary {
+        cursor: pointer;
+        list-style: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .mobile-nav summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .mobile-nav nav {
+        position: absolute;
+        top: 100%;
+        left: -50px;
+        width: 250px;
+        background-color: var(--Background-color);
+        border: 2px solid #0c0c0c;
+        border-radius: 10px;
+        box-shadow: 0px 5px 30px var(--Accent-color);
+        z-index: 1000;
+    }
+
+    .mobile-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+        gap: 20px;
+    }
+
+    .mobile-nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-nav a {
+        display: block;
+        padding: 8px;
+    }
+}
